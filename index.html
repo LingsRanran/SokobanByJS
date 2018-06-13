@@ -5,9 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Sokoban</title>
     <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
+    <script src="js/level.js"></script>
     <script src="js/index.js"></script>
 </head>
 <body>
-    <div></div>
+    <div id="game">
+        <canvas id="canvas" width="560" height="560"></canvas>
+        <div id="playerInfo">第一关 移动步数：0</div>
+        <button id="lastLevel" onclick="nextLevel(-1)">上一关</button>
+        <button id="nextLevel" onclick="nextLevel(1)">下一关</button>
+        <button id="rePlay" onclick="nextLevel(0)">重玩本关</button>
+        <button id="showInfo" onclick="showInfo()">游戏说明</button>
+    </div>
 </body>
 </html>
